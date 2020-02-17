@@ -1,0 +1,43 @@
+<div>
+  <mat-toolbar class="mat-toolbar" >
+    <div class="title">{{title}}</div>
+  </mat-toolbar>
+  <mat-card class="body">
+      <div>
+          <p>Nombre d'allumettes : {{allumettes.length}}/{{nbrAllumettes}}</p>
+          <p>Score : J1 {{scorePremJoueur}} - {{scoreSecJoueur}} J2</p>
+      </div>
+      <mat-grid-list cols="2" rowHeight="4:1">
+          <mat-grid-tile>
+            <p>
+              <span [ngClass]="{'blue-tile' : tourPremierJoueur}">Joueur 1</span>
+              <mat-button-toggle-group  [disabled]="!tourPremierJoueur" (change)="JouerUnePartie(true,$event)">
+                  <mat-button-toggle value="1" >1 Pièce</mat-button-toggle>
+                  <mat-button-toggle [disabled]="allumettes.length < 2" value="2">2 Pièces</mat-button-toggle>
+                  <mat-button-toggle [disabled]="allumettes.length < 3" value="3">3 Pièces</mat-button-toggle>
+              </mat-button-toggle-group>
+            </p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+              <p>
+                  <span [ngClass]="{'blue-tile' : !tourPremierJoueur}">Joueur 2</span>
+                  <mat-button-toggle-group [disabled]="tourPremierJoueur" (change)="JouerUnePartie(false,$event)">
+                      <mat-button-toggle value="1" >1 Pièce</mat-button-toggle>
+                      <mat-button-toggle [disabled]="allumettes.length < 2" value="2" >2 Pièces</mat-button-toggle>
+                      <mat-button-toggle [disabled]="allumettes.length < 3" value="3" >3 Pièces</mat-button-toggle>
+                  </mat-button-toggle-group>
+              </p>
+          </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="1" rowHeight="5:1">
+          <mat-grid-tile>
+              <img *ngFor="let item of allumettes" src="../assets/img/allum.gif" style="margin:5px;">
+          </mat-grid-tile>
+      </mat-grid-list>
+      <div>
+        <p>{{messageFinPartie}}</p>
+        <button mat-raised-button (click)="getNbrAllumettes()" [disabled]="disableButton">Rejouer</button>
+      </div>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>

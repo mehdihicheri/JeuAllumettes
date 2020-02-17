@@ -1,0 +1,40 @@
+.title{
+    text-align: center;
+    width: 100%;
+}
+
+.mat-toolbar{
+    background:#00f;
+}
+
+.body{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+} 
+
+.imgAllum{
+    margin: 10px;
+}
+
+p span 
+{
+    display: block;
+}
+
+.mat-card {
+    background: #fff;
+    color: #00f;
+    padding: 2px;
+    text-align: center;
+}
+
+.blue-tile {
+    background:#00f;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+  }
