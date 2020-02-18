@@ -10,8 +10,8 @@
       <mat-grid-list cols="2" rowHeight="4:1">
           <mat-grid-tile>
             <p>
-              <span [ngClass]="{'blue-tile' : tourPremierJoueur}">Joueur 1</span>
-              <mat-button-toggle-group  [disabled]="!tourPremierJoueur" (change)="JouerUnePartie(true,$event)">
+              <span [ngClass]="{'player-tile' : tourPremierJoueur}">Joueur 1</span>
+              <mat-button-toggle-group  [disabled]="!tourPremierJoueur" (change)="JouerUnePartie(true,$event)" id="j1" >
                   <mat-button-toggle value="1" >1 Pièce</mat-button-toggle>
                   <mat-button-toggle [disabled]="allumettes.length < 2" value="2">2 Pièces</mat-button-toggle>
                   <mat-button-toggle [disabled]="allumettes.length < 3" value="3">3 Pièces</mat-button-toggle>
@@ -20,8 +20,8 @@
           </mat-grid-tile>
           <mat-grid-tile>
               <p>
-                  <span [ngClass]="{'blue-tile' : !tourPremierJoueur}">Joueur 2</span>
-                  <mat-button-toggle-group [disabled]="tourPremierJoueur" (change)="JouerUnePartie(false,$event)">
+                  <span [ngClass]="{'player-tile' : !tourPremierJoueur}">Joueur 2</span>
+                  <mat-button-toggle-group [disabled]="tourPremierJoueur" (change)="JouerUnePartie(false,$event)" id="j2">
                       <mat-button-toggle value="1" >1 Pièce</mat-button-toggle>
                       <mat-button-toggle [disabled]="allumettes.length < 2" value="2" >2 Pièces</mat-button-toggle>
                       <mat-button-toggle [disabled]="allumettes.length < 3" value="3" >3 Pièces</mat-button-toggle>

@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AllumettesProviderService } from './service/allumettes-provider.service';
+import { TestBed } from '@angular/core/testing';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatCardModule} from '@angular/material/card';
+import { MatIconModule} from '@angular/material/icon';
+import { MatBadgeModule} from '@angular/material/badge';
+import { MatButtonModule} from '@angular/material/button';
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -88,5 +97,4 @@ JouerUnePartie (isPlayerOne:boolean, event:any){
   // Passer le tour au joueur suivant
   this.tourPremierJoueur = !this.tourPremierJoueur;
 }
-
 }
