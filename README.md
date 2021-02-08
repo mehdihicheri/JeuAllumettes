@@ -15,5 +15,5 @@ Ce que nous voulons
 
 - Une application Angular prête à être utilisée, documentée et testée
 - Vous devrez rendre disponible l’application sur votre compte Github personnel
-- En aucun cas vous ne devez mentionner DOCA#### (dans votre code, dossiers, nom du
+- En aucun cas vous ne devez mentionner DOCA#### =) (dans votre code, dossiers, nom du
 projet …)
